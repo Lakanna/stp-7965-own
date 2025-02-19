@@ -1,13 +1,105 @@
-<header class="header">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="./page-2.html" class="nav-link">Page 2</a>
-      </li>
+<div class="header">
+  <div class="header-mobile">
+    <a href="./index.html" class="header-logo-mobile">
+      <img
+        src="/img/logo.png"
+        srcset="/img/logo.png 1x, /img/logo@2x.png 2x"
+        alt="logo"
+        width="20"
+        height="20"
+      />
+    </a>
+    <button class="menu-toggle js-open-menu">
+      <svg width="20" height="20">
+        <use href="/img/sprite.svg#menu"></use>
+      </svg>
+    </button>
+  </div>
 
-      <li class="nav-item">
-        <a href="./page-3.html" class="nav-link">Page 3</a>
+  <nav class="header-nav-mobile js-menu" style="display: none">
+    <button class="menu-toggle js-close-menu">
+      <svg width="20" height="20">
+        <use href="/img/sprite.svg#menu-close"></use>
+      </svg>
+    </button>
+    <ul class="header-nav-list-mobile">
+      <li class="header-nav-item-mobile">
+        <a href="./index.html" class="header-nav-link-mobile">Home</a>
+      </li>
+      <li class="header-nav-item-mobile">
+        <a href="./index.html#benefits" class="header-nav-link-mobile"
+          >Benefits</a
+        >
+      </li>
+      <li class="header-nav-item-mobile">
+        <a href="./index.html#about" class="header-nav-link-mobile"
+          >About This Game</a
+        >
+      </li>
+      <li class="header-nav-item-mobile">
+        <a href="./index.html#how-to-play" class="header-nav-link-mobile"
+          >How to Play</a
+        >
+      </li>
+      <li class="header-nav-item-mobile">
+        <a href="./index.html#faq" class="header-nav-link-mobile">FAQ</a>
+      </li>
+      <li class="header-nav-item-mobile">
+        <a href="./index.html#reviews" class="header-nav-link-mobile"
+          >Reviews</a
+        >
+      </li>
+      <li class="header-nav-item-mobile">
+        <a href="./index.html#gallery" class="header-nav-link-mobile"
+          >Gallery</a
+        >
       </li>
     </ul>
   </nav>
-</header>
+
+  <div class="header-desktop">
+    <a href="./index.html" class="header-logo-desktop">
+      <img
+        src="/img/logo-desktop.png"
+        srcset="/img/logo-desktop.png 1x, /img/logo-desktop@2x.png 2x"
+        alt="logo"
+        width="60"
+        height="60"
+      />
+    </a>
+    <nav class="header-nav">
+      <ul class="header-nav-list">
+        <li class="header-nav-item">
+          <a href="./index.html" class="header-nav-link">Home</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="./index.html#benefits" class="header-nav-link">Benefits</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="./index.html#about" class="header-nav-link"
+            >About This Game</a
+          >
+        </li>
+        <li class="header-nav-item">
+          <a href="./index.html#how-to-play" class="header-nav-link"
+            >How to Play</a
+          >
+        </li>
+        <li class="header-nav-item">
+          <a href="./index.html#faq" class="header-nav-link">FAQ</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="./index.html#reviews" class="header-nav-link">Reviews</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="./index.html#gallery" class="header-nav-link">Gallery</a>
+        </li>
+        <li class="header-nav-item-mobile">
+          <a href="./privacy-policy.html" class="header-nav-link-mobile"
+            >Privacy Policy</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
