@@ -1,0 +1,14 @@
+.benefits-title-box {
+  position: relative;
+  display: inline-block;
+  margin-top: 126px;
+}
+
+.benefits-title {
+  position: absolute;
+  top: 43%;
+  transform: translateY(-50%);
+  left: 105px;
+  @include font(40, 46);
+  font-weight: 600;
+}
