@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <defs>
+    <linearGradient id="paint0_linear" x1="471.003" y1="41.5405" x2="855.004" y2="41.5405" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A79561"/>
+      <stop offset="1" stop-color="#A79561" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="63" y1="40.5" x2="-39" y2="41" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A79561"/>
+      <stop offset="1" stop-color="#A79561" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <symbol id="icon-gradient" viewBox="0 0 858 79">
+    <path d="M64 38L90 0L448 0L472 38L448 76L90 76L64 38Z" fill="#0F3346"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M468.003 41.0405C468.003 39.3837 469.346 38.0405 471.003 38.0405H855.004C856.661 38.0405 858.004 39.3837 858.004 41.0405C858.004 42.6974 856.661 44.0405 855.004 44.0405H471.003C469.346 44.0405 468.003 42.6974 468.003 41.0405Z" fill="url(#paint0_linear)"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M66 41C66 42.6569 64.6569 44 63 44L3 44C1.34315 44 0 42.6569 0 41C0 39.3431 1.34315 38 3 38L63 38C64.6569 38 66 39.3431 66 41Z" fill="url(#paint1_linear)"/>
+  </symbol>
+
+  <symbol id='box' viewBox="0 0 858 79">
+      <path fill="#0F3346" d="M64 38 90 0h358l24 38-24 38H90L64 38Z"/>
+  <path fill="#A79561" fill-rule="evenodd" d="M60.429 38.936a4 4 0 0 1 5.635.493L91.776 70.07a4 4 0 1 1-6.129 5.142L59.936 44.571a4 4 0 0 1 .493-5.635ZM443.421 75.7a4 4 0 0 1-.479-5.637l25-29.642a4 4 0 0 1 6.116 5.158l-25 29.642a4 4 0 0 1-5.637.478Z" clip-rule="evenodd"/>
+  <path fill="#A79561" fill-rule="evenodd" d="M85 73a4 4 0 0 1 4-4h357a4 4 0 0 1 0 8H89a4 4 0 0 1-4-4Z" clip-rule="evenodd"/>
+  <path fill="url(#a)" fill-rule="evenodd" d="M468.003 41.04a3 3 0 0 1 3-3h384.001a3 3 0 1 1 0 6H471.003a3 3 0 0 1-3-3Z" clip-rule="evenodd"/>
+  <path fill="url(#b)" fill-rule="evenodd" d="M66 41a3 3 0 0 1-3 3H3a3 3 0 1 1 0-6h60a3 3 0 0 1 3 3Z" clip-rule="evenodd"/>
+  <defs>
+    <linearGradient id="a" x1="471.003" x2="855.004" y1="41.541" y2="41.541" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A79561"/>
+      <stop offset="1" stop-color="#A79561" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="b" x1="63" x2="-39" y1="40.5" y2="41" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A79561"/>
+      <stop offset="1" stop-color="#A79561" stop-opacity=".1"/>
+    </linearGradient>
+  </defs>
+  </symbol>
+</svg>
