@@ -12,5 +12,23 @@
     <symbol id="menu" viewBox="0 0 25 25">
       <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3.125 12.5h18.75M3.125 6.25h18.75m-18.75 12.5h18.75" style="stroke:var(--color1, #fff)"/>
     </symbol>
+
+    <symbol id='box' viewBox="0 0 858 79">
+      <path fill="#0F3346" d="M64 38 90 0h358l24 38-24 38H90L64 38Z"/>
+  <path fill="#A79561" fill-rule="evenodd" d="M60.429 38.936a4 4 0 0 1 5.635.493L91.776 70.07a4 4 0 1 1-6.129 5.142L59.936 44.571a4 4 0 0 1 .493-5.635ZM443.421 75.7a4 4 0 0 1-.479-5.637l25-29.642a4 4 0 0 1 6.116 5.158l-25 29.642a4 4 0 0 1-5.637.478Z" clip-rule="evenodd"/>
+  <path fill="#A79561" fill-rule="evenodd" d="M85 73a4 4 0 0 1 4-4h357a4 4 0 0 1 0 8H89a4 4 0 0 1-4-4Z" clip-rule="evenodd"/>
+  <path fill="url(#a)" fill-rule="evenodd" d="M468.003 41.04a3 3 0 0 1 3-3h384.001a3 3 0 1 1 0 6H471.003a3 3 0 0 1-3-3Z" clip-rule="evenodd"/>
+  <path fill="url(#b)" fill-rule="evenodd" d="M66 41a3 3 0 0 1-3 3H3a3 3 0 1 1 0-6h60a3 3 0 0 1 3 3Z" clip-rule="evenodd"/>
+  <defs>
+    <linearGradient id="a" x1="471.003" x2="855.004" y1="41.541" y2="41.541" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A79561"/>
+      <stop offset="1" stop-color="#A79561" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="b" x1="63" x2="-39" y1="40.5" y2="41" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A79561"/>
+      <stop offset="1" stop-color="#A79561" stop-opacity=".1"/>
+    </linearGradient>
+  </defs>
+  </symbol>
   </defs>
 </svg>
