@@ -50,34 +50,8 @@ footer {
   line-height: 16px;
 }
 
-.footer-vectors {
-  position: relative;
-  width: 100%;
-}
-
-.footer-vector-1 {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.footer-vector-2 {
-  position: absolute;
-  top: 8px; /* Отступ вниз на 8px */
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.footer-vector-3 {
-  position: absolute;
-  top: 17px; /* 8px + 9px = 17px */
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.footer-vectors {
-  margin-bottom: 20px;
+.footer-desktop-png {
+  display: none;
 }
 
 .hidden-desktop {
@@ -87,10 +61,12 @@ footer {
 /*-----------------Desktop-------------------------*/
 
 @media (min-width: 1200px) {
-  .footer-vector-1,
-  .footer-vector-2,
-  .footer-vector-3 {
+  .footer-mobile-png {
     display: none;
+  }
+
+  .footer-desktop-png {
+    display: block;
   }
 
   .hidden-desktop {
@@ -166,9 +142,4 @@ footer {
     font-size: 20px;
     line-height: 30px;
   }
-
-  .footer-vectors {
-    margin-bottom: 32px;
-  }
 }
-
