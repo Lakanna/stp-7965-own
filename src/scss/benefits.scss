@@ -6,9 +6,52 @@
 
 .benefits-title {
   position: absolute;
-  top: 43%;
+  top: 50%;
   transform: translateY(-50%);
-  left: 105px;
+  left: 90px;
   @include font(40, 46);
   font-weight: 600;
 }
+
+.benefits-list {
+  width: 936px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0 auto;
+}
+
+.benefits-list-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.benefits-item-title {
+  display: inline;
+  font-weight: 400;
+
+  @include font(32, 30);
+}
+
+.benefits-item-info {
+  display: inline;
+  font-weight: 400;
+
+  @include font(20, 30);
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.shadow-right {
+  box-shadow: 6px 6px 16px rgba(13, 33, 43, 100%);
+}
+
+.shadow {
+  box-shadow: -6px 6px 16px rgba(13, 33, 43, 100%);
+}
+// .container-info {
+//   // display: flex;
+// }
