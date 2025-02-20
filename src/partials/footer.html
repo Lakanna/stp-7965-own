@@ -1,15 +1,30 @@
 <footer>
   <div class="footer-container">
-    <!-- Footer svg -->
-    <svg class="footer-vector-1" width="320" height="24">
-      <use href="/img/sprite.svg#decor"></use>
-    </svg>
-    <svg class="footer-vector-2" width="320" height="20">
-      <use href="/img/sprite.svg#footer-vector-8"></use>
-    </svg>
-    <svg class="footer-vector-3" width="180" height="10">
-      <use href="/img/sprite.svg#footer-group-15"></use>
-    </svg>
+    <div class="footer-png">
+      <!-- Mobile PNG (по умолчанию, скрываются на десктопе) -->
+      <img
+        src="/img/footer/footer-mobile.png"
+        srcset="
+          /img/footer/footer-mobile.png 1x,
+          /img/footer/footer-mobile@2x  2x
+        "
+        alt="footer-mobile"
+        class="footer-mobile-png"
+        weight="100%"
+        height="28"
+      />
+
+      <!-- Desktop PNG (по умолчанию скрыты, отображаются при 1200px+) -->
+      <img
+        src="/img/footer/footer-desk.png"
+        srcset="/img/footer/footer-desk.png 1x, /img/footer/footer-desk@2x 2x"
+        alt="footer-desktop"
+        class="footer-desktop-png"
+        weight="100%"
+        height="28"
+      />
+    </div>
+
     <div class="footer-content">
       <nav>
         <ul>
