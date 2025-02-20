@@ -22,6 +22,15 @@
   color: #ffffff;
 }
 
+.background {
+  background-image: linear-gradient(
+    92.58deg,
+    #111a1f 0.48%,
+    #375463 48.33%,
+    #111a1f 96.17%
+  );
+}
+
 .container {
   width: 320px;
   padding-left: 16px;
@@ -29,12 +38,6 @@
   margin-left: auto;
   margin-right: auto;
 
-  background-image: linear-gradient(
-    92.58deg,
-    #111a1f 0.48%,
-    #375463 48.33%,
-    #111a1f 96.17%
-  );
   @include media(desktop) {
     width: 1200px;
     padding-left: 36px;
