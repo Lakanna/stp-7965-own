@@ -1,15 +1,40 @@
 <footer>
   <div class="footer-container">
-    <!-- Footer svg -->
-    <svg class="footer-vector-1" width="320" height="24">
-      <use href="/img/sprite.svg#footer-vector-7"></use>
-    </svg>
-    <svg class="footer-vector-2" width="320" height="20">
-      <use href="/img/sprite.svg#footer-vector-8"></use>
-    </svg>
-    <svg class="footer-vector-3" width="180" height="10">
-      <use href="/img/sprite.svg#footer-group-15"></use>
-    </svg>
+    <div class="footer-vectors">
+      <!-- Mobile SVG (по умолчанию, скрываются на десктопе) -->
+      <svg class="footer-vector-1" width="320" height="26">
+        <use href="/img/sprite.svg#footer-vector-7" fill="none"></use>
+      </svg>
+      <svg class="footer-vector-2" width="320" height="22">
+        <use href="/img/sprite.svg#footer-vector-8" fill="none"></use>
+      </svg>
+      <svg class="footer-vector-3" width="180" height="10">
+        <use href="/img/sprite.svg#footer-group-15"></use>
+      </svg>
+
+      <!-- Desktop SVG (по умолчанию скрыты, отображаются при 1200px+) -->
+      <svg
+        class="footer-vector-desktop-1 hidden-desktop"
+        width="1200"
+        height="26"
+      >
+        <use href="/img/sprite.svg#footer-vector-7-desktop" fill="none"></use>
+      </svg>
+      <svg
+        class="footer-vector-desktop-2 hidden-desktop"
+        width="1200"
+        height="22"
+      >
+        <use href="/img/sprite.svg#footer-vector-8-desktop" fill="none"></use>
+      </svg>
+      <svg class="footer-group-right hidden-desktop" width="301" height="14">
+        <use href="/img/sprite.svg#footer-group-14-desktop"></use>
+      </svg>
+      <svg class="footer-group-left hidden-desktop" width="301" height="14">
+        <use href="/img/sprite.svg#footer-group-15-desktop"></use>
+      </svg>
+    </div>
+
     <div class="footer-content">
       <nav>
         <ul>
