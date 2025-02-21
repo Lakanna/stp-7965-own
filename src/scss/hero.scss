@@ -160,6 +160,7 @@
 
   .hero-content {
     display: flex;
+    position: relative;
     flex-direction: row;
     gap: 25px;
   }
@@ -168,21 +169,38 @@
     display: none;
   }
 
+  .hero-desktop {
+    display: flex;
+    position: relative;
+    gap: 25px;
+  }
+
   .hero-image-desktop {
-    display: block;
-    width: 492px;
+    display: flex;
+    position: relative;
+    width: 456px;
+    height: 595px;
+  }
+
+  .hero-image-desktop-img {
+    position: absolute;
+    left: -36px;
+    top: 0;
+    min-width: 492px;
     height: 595px;
     flex-shrink: 0;
   }
 
-  .hero-desktop {
+  .hero-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 647px;
   }
 
   .hero-title {
     margin-bottom: 24px;
+    width: 647px;
   }
 
   .hero-title-h1 {
@@ -206,6 +224,7 @@
   .hero-description {
     margin-top: 0;
     margin-bottom: 40px;
+    width: 647px;
   }
 
   .hero-description h4 {
@@ -227,8 +246,5 @@
 
   .hero-description {
     order: 1;
-  }
-  .container {
-    padding-left: 0px !important;
   }
 }
