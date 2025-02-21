@@ -23,6 +23,7 @@
   "author": "Andrii Kyrylenko <z9877969@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "vanilla-tilt": "^1.8.1",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"
   }
