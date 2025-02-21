@@ -63,3 +63,9 @@ body.polisy h2 {
     font-weight: 600;
   }
 }
+
+.dissapear-desctop {
+  @include media(desktop) {
+    display: none;
+  }
+}
