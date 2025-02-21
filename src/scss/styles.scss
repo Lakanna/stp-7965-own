@@ -1,5 +1,6 @@
 @import './header.scss';
 @import './footer.scss';
+@import './hero.scss';
 @import './benefits.scss';
 @import './about.scss';
 @import './privacy-policy.scss';
@@ -23,6 +24,15 @@
   color: #ffffff;
 }
 
+.background {
+  background-image: linear-gradient(
+    92.58deg,
+    #111a1f 0.48%,
+    #375463 48.33%,
+    #111a1f 96.17%
+  );
+}
+
 .container {
   width: 320px;
   padding-left: 16px;
@@ -30,12 +40,6 @@
   margin-left: auto;
   margin-right: auto;
 
-  background-image: linear-gradient(
-    92.58deg,
-    #111a1f 0.48%,
-    #375463 48.33%,
-    #111a1f 96.17%
-  );
   @include media(desktop) {
     width: 1200px;
     padding-left: 36px;
@@ -58,5 +62,11 @@ body.polisy h2 {
   @include media(desktop) {
     font-size: 20px;
     font-weight: 600;
+  }
+}
+
+.dissapear-desctop {
+  @include media(desktop) {
+    display: none;
   }
 }

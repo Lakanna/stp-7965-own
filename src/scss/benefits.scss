@@ -1,24 +1,30 @@
 .benefits-title-box {
   position: relative;
-  display: inline-block;
-  margin-top: 126px;
+  display: block;
+  // margin-top: 126px;
   margin-bottom: 30px;
 
   @include media(desktop) {
+    width: 1200px;
+    padding-left: 36px;
+    padding-right: 36px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 46px;
   }
 }
 
 .benefits-title {
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
   font-weight: 600;
   left: 31px;
+
   @include font(24, 24);
 
   @include media(desktop) {
-    left: 90px;
+    left: 130px;
     @include font(40, 46);
   }
 }
@@ -31,8 +37,10 @@
   gap: 16px;
 
   margin: 0 auto;
+  margin-bottom: 60px;
 
   @include media(desktop) {
+    margin-bottom: 126px;
     width: 936px;
   }
 }
@@ -40,27 +48,48 @@
 .benefits-list-item {
   display: flex;
   align-items: center;
-  gap: 24px;
+  justify-content: flex-start;
+
+  position: relative;
+  width: 288px;
+  height: 112px;
+
+  @include media(desktop) {
+    width: 936px;
+    height: 160px;
+    gap: 24px;
+  }
+}
+
+.benefits-text {
+  width: 288px;
+  // height: 112px;
+
+  @include media(desktop) {
+    width: 744px;
+  }
 }
 
 .benefits-item-title {
-  display: inline;
   font-weight: 400;
+  margin-bottom: 8px;
 
   @include font(20, 24);
 
   @include media(desktop) {
+    display: inline;
     @include font(32, 30);
   }
 }
 
 .benefits-item-info {
-  display: inline;
   font-weight: 300;
+  width: 200px;
 
   @include font(16, 20);
 
   @include media(desktop) {
+    display: inline;
     font-weight: 400;
     @include font(20, 30);
   }
@@ -68,21 +97,53 @@
 
 .img-benefits {
   width: 72px;
+  position: absolute;
 
   @include media(desktop) {
+    position: relative;
     width: 168px;
   }
 }
+
+.left {
+  margin-left: 92px;
+
+  @include media(desktop) {
+    margin-left: 0;
+  }
+}
+
 .reverse {
   flex-direction: row-reverse;
 }
 
 .shadow-right {
+  left: 216px;
+  top: 37px;
   box-shadow: 6px 6px 16px rgba(13, 33, 43, 100%);
+  @include media(desktop) {
+    left: 0;
+    top: 0;
+  }
 }
 
 .shadow {
   box-shadow: -6px 6px 16px rgba(13, 33, 43, 100%);
+  right: 216px;
+  top: 38px;
+
+  @include media(desktop) {
+    right: 0;
+    top: 0;
+  }
+}
+
+.dissapear {
+  display: none;
+
+  @include media(desktop) {
+    display: inline;
+  }
 }
 // .container-info {
 //   // display: flex;

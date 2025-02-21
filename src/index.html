@@ -14,18 +14,58 @@
     <meta name="author" content="Fusion Star Force Studios" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://fusionstarforce.com" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <title>Star Force</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="./scss/styles.scss" />
   </head>
 
-  <body>
+  <body class="background">
     <load ="partials/header.html" />
+
+    <load ="partials/hero.html" />
+
+    <!-- //** box for title of section -->
+
+    <div class="benefits-title-box">
+      <h1 class="benefits-title">Benefits</h1>
+      <img
+        src="./img/sectionbox.png"
+        srcset="./img/sectionbox.png 1x, ./img/sectionbox2.png 2x"
+        alt="The section box"
+        width="878"
+        height="79"
+        class="dissapear"
+      />
+      <img
+        src="./img/mobileSectBox.png"
+        srcset="./img/mobileSectBox.png 1x, ./img/mobileSectBox2.png 2x"
+        alt="Benefits"
+        class="dissapear-desctop"
+      />
+    </div>
+
+    <!-- <img src="./img/mobileSectBox2.png" alt="Benefits" /> -->
 
     <load ="partials/benefits.html" />
 
@@ -33,8 +73,7 @@
 
     <section>
       <!-- <h1>Example page title</h1> -->
-      <!-- <img src="./img/benefits/sectionbox.png" alt="Benefits" />
-      <img src="./img/sectionbox2.png" alt="Benefits" /> -->
+
       <!-- Path to images as from index.html file -->
       <!-- <img src="./img/javascript.svg" alt="" /> -->
     </section>
