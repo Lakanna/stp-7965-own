@@ -1,6 +1,6 @@
 .benefits-title {
   width: 292px;
-  height: 40px;
+  height: 42px;
   background-image: url('../img/mobileSectBox.png');
   margin-bottom: 30px;
   padding-left: 31px;
@@ -24,6 +24,58 @@
   }
 }
 
+.section-title {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  display: flex;
+
+  align-items: center;
+
+  @include media(desktop) {
+    height: 76px;
+  }
+}
+
+.section-title h1 {
+  position: absolute;
+  left: 12px;
+  font-weight: 600;
+
+  @include font(24, 24);
+
+  @include media(desktop) {
+    left: 90px;
+
+    @include font(40, 46);
+  }
+}
+
+.section-title-group {
+  position: absolute;
+  left: -16px;
+  width: 292px;
+  height: 40px;
+  flex-shrink: 0;
+
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.section-title-group-desktop {
+  display: none;
+
+  @include media(desktop) {
+    display: block;
+    position: absolute;
+
+    width: 852px;
+    height: 76px;
+    flex-shrink: 0;
+  }
+}
+
 .benefits-list {
   width: 288px;
 
@@ -32,9 +84,11 @@
   gap: 16px;
 
   margin: 0 auto;
+  margin-top: 30px;
   margin-bottom: 60px;
 
   @include media(desktop) {
+    margin-top: 46px;
     margin-bottom: 126px;
     width: 936px;
   }
@@ -138,5 +192,29 @@
 
   @include media(desktop) {
     display: inline;
+  }
+}
+
+.decor-top {
+  display: none;
+
+  @include media(desktop) {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-481px);
+    height: 2193px;
+  }
+}
+
+.decor-top-mobile {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-238px);
+  height: 1850px;
+  z-index: 0;
+
+  @include media(desktop) {
+    display: none;
   }
 }

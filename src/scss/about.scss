@@ -3,7 +3,6 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
 }
 
 .about-name {
@@ -72,10 +71,6 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  .about-this {
-    padding-top: 126px;
-  }
-
   .about-group {
     display: none;
   }
