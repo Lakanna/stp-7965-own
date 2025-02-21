@@ -40,7 +40,7 @@
     
     <script type="module" crossorigin src="/stp-7965-own/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/stp-7965-own/assets/vendor-238c927e.js">
-    <link rel="stylesheet" href="/stp-7965-own/assets/styles-b15b6c9e.css">
+    <link rel="stylesheet" href="/stp-7965-own/assets/styles-4096256b.css">
   </head>
 
   <body class="background">
@@ -157,14 +157,6 @@
           alt="Star Force"
         />
       </div>
-      <!-- Desktop version img -->
-      <div class="hero-image-desktop">
-        <img
-          src="/stp-7965-own/assets/hero-photo-desk-9308f0f8.png"
-          srcset="/stp-7965-own/assets/hero-photo-desk-9308f0f8.png 1x, /stp-7965-own/assets/hero-photo-desk@2x-cfdb1eaf.png 2x"
-          alt="Star Force"
-        />
-      </div>
 
       <div class="hero-shadow">
         <div class="shadow-line">
@@ -188,42 +180,54 @@
           alt="Shadow"
         />
       </div>
+
       <div class="hero-desktop">
-        <div class="hero-title">
-          <h1 class="hero-title-h1">
-            Star Force <span class="hyphen">-</span>
-          </h1>
-
-          <p>Conquer the Galaxy, One Battle at a Time!</p>
+        <!-- Desktop version img -->
+        <div class="hero-image-desktop">
+          <img
+            class="hero-image-desktop-img"
+            src="/stp-7965-own/assets/hero-photo-desk-9308f0f8.png"
+            srcset="/stp-7965-own/assets/hero-photo-desk-9308f0f8.png 1x, /stp-7965-own/assets/hero-photo-desk@2x-cfdb1eaf.png 2x"
+            alt="Star Force"
+          />
         </div>
+        <div class="hero-content">
+          <div class="hero-title">
+            <h1 class="hero-title-h1">
+              Star Force <span class="hyphen">-</span>
+            </h1>
 
-        <div class="hero-btn">
-          <a
-            target="_blank"
-            href="https://play.google.com/store/apps/details?id=com.tbg.nova.gp&hl=ru&gl=us"
-          >
-            <div class="hero-btn-google-play">
-              <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAcCAYAAAB75n/uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAImSURBVHgBrZYxbNNAFIbfu5xDGygMCAQLJILC2qFBCFUipGFgLgiY2g4MbM3IAkGIoVMbJCYGwlC1DEiVWLpETiUQCFWiG2M9oKK2SKRtBDS+88M2DXKt2D6bfIv9zs//Z99JpwPYJz93a2h4/mYBegxenr+TlWjqBJB1B4AMRKx8uv3mFfQAHF4Y0+1rocuzRU6y/PHuogH/Ixh5tkS/T74IbgCqpch6nFTE0rsj0Ld5L7CBACckMv3S67FxSAAWn7bIuWkPvIOwP3GbE6zPP4GqZF+kPG0HBHEkqiLmH4haEy/O+lxM7+hC18aVBR3J4a9PAK0MhDHIt2Hm6IcsSaq169paNxELejm1dwYy6w8CJU7482PvYQBNt0aijujlL70vGykIk/jDvdiiCS7FmlnnM5GCbpKw8AMQTNmSR5ECr+QCM9XCPRIlgcO5722YfrsBR9oWxEFJcPXbEjz8XIZD6xbszg0C7aVACYRapMAJv/9lGjKi5dZyo19NgjCrjYoyUwn3EyFpCFPknHCnYHHD/RJrO+3WZG+EdlpBK4lr/TfA6PSxJOFeSWvhvGFvGVPpksxpRbHs7+FJw92vJqrsbLHq8ZLZDOrhycKpIaWYPN1YNaI6ebxwaqCFlRP6yjIowtXCqWkBVk7VV6oQEx4eTk0imP1piWqusdqEBODWaN45ExW6hCvPcxhcSHOSMU1H/HvwSjLPSmxezw/9KF45Cz3mD9LrLWecOqiBAAAAAElFTkSuQmCC"
-                srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAcCAYAAAB75n/uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAImSURBVHgBrZYxbNNAFIbfu5xDGygMCAQLJILC2qFBCFUipGFgLgiY2g4MbM3IAkGIoVMbJCYGwlC1DEiVWLpETiUQCFWiG2M9oKK2SKRtBDS+88M2DXKt2D6bfIv9zs//Z99JpwPYJz93a2h4/mYBegxenr+TlWjqBJB1B4AMRKx8uv3mFfQAHF4Y0+1rocuzRU6y/PHuogH/Ixh5tkS/T74IbgCqpch6nFTE0rsj0Ld5L7CBACckMv3S67FxSAAWn7bIuWkPvIOwP3GbE6zPP4GqZF+kPG0HBHEkqiLmH4haEy/O+lxM7+hC18aVBR3J4a9PAK0MhDHIt2Hm6IcsSaq169paNxELejm1dwYy6w8CJU7482PvYQBNt0aijujlL70vGykIk/jDvdiiCS7FmlnnM5GCbpKw8AMQTNmSR5ECr+QCM9XCPRIlgcO5722YfrsBR9oWxEFJcPXbEjz8XIZD6xbszg0C7aVACYRapMAJv/9lGjKi5dZyo19NgjCrjYoyUwn3EyFpCFPknHCnYHHD/RJrO+3WZG+EdlpBK4lr/TfA6PSxJOFeSWvhvGFvGVPpksxpRbHs7+FJw92vJqrsbLHq8ZLZDOrhycKpIaWYPN1YNaI6ebxwaqCFlRP6yjIowtXCqWkBVk7VV6oQEx4eTk0imP1piWqusdqEBODWaN45ExW6hCvPcxhcSHOSMU1H/HvwSjLPSmxezw/9KF45Cz3mD9LrLWecOqiBAAAAAElFTkSuQmCC 1x, data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAA2CAYAAACBWxqaAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQwSURBVHgB1ZpLbBNHGMe/Wa9bIKWkKmmaUqlOpUgc0ypUHE2aSq16aKBUFac6h/ZsH3tpnEMFHIDkwJUkSDwFwgeOGJsDEo+ghBsSSLEQj4CQMHEID8/OMDPRWLax1/v4xjG/k3c9s/P/Zb4v8noN8IFDqg/i06PdyxusUcuCb+Qxd8jtzW+cfH4sU4QOpSIwdHpvEggfBw7dtQN4gXNrdm7fuTR0IEpg6NTetArvOpAXCCHpG3+en4UOguw4+8cgZ2zex5y8zZ2xa/syBegALM7ZuM85cUoiiztO75neeWo0BuuM1fVgIk7YJvALB5JwiJUbOrknCesIGf5/hTsf34fVr/YDt1YhCOvZH0pAvmDRZ/BSStjPIAQZ0R+pdvZHRUCCJCF3ZCbC2UQ7RKyag/JW6Hr0LxC6FcLQzv6o2QEN1k6oBQz3R0MBCaaEWshQWTUVkGBLqAWRRSzXN5F6ohrdHz+c+f0vQMB1BzQmdkItjtAflqdBBnZCInYjxjjM/Hz21+lXuQ0xCIAnATXQkMRmUobDn15L2A5dfJuN+hbxLKAGI0vI8Ee3XIUB+4U6JpwnIszJ0VzUc3/4ElATkCTqw2uERIw7fEbsxiK9HPmt1XV8C6hJISWaha9GiTCSaVVWgQTUxIASfZHVluGrkWUl+6OctY80EgksoCb7lPAbvgYOyUb9EUpAXcCjhA7fF/CeQ6L7o3zJnte7EVpAXaSFBEb4OgZFWV1QawMSzSQMhNcMir4YRxOQ1EsYDL8GhziqgERLbBNfFBgNvwa+gKR3mcKBi0+gt0TBNOgCPa+W4L/5FHz+5DksH9sOztONYAwOC6gCOnzP66W167+OQOnEgDEJQvgkmkB9eI0pCS7uJewRZxZFoFn4ymLYEqJ0nLKzS74MLdAqfGVNFAleFDdByehP9LuNv0BBngkl4DV8ZfkwEgQm7ZLT/9FIear6dGABv+E1ASTytEz7oz/SFNkN7z0pCiQQNLzGk4Soc5EuHh2hu3S5NMK3QNjwGi1Rvrul/p1KnUeH6ZVW1/ElgBVeIyVWzn1bdB52LagTBNKN6twNzwLY4avofnF8oGCX6Geizica1bkbngRipXtw8ObfBsLzPGEQ783O7fYbXGO3GiDDy7/8JroCePAiA5L+MjvnuVSa4SqAH140KIfJVUan+vMLKA/Pmwpghxffg2aoQ1N9+YUCINJQADe8rHOS7snNtfyXGIT3BPDCc1EiPPlF9pbRJ5c1Ajjh8evcjYoARnhTde6GEggf3mydu2HvfJov/nPnUHeQ8KJUxBMWljZd525Ezn9yd3uUvR30NWutzg+IOh/7Ojd/HdYRW3yYmAIGCc8zxCMhh9GJdta5G+oHT0vDQ0mLkCPuQ3Wd32x7nbtR+cnZ4+HvExZExgmBWPUAWeeUsNS27K0MdCDvAHrbo7CGeNbxAAAAAElFTkSuQmCC 2x"
-                alt="Icon Google Play"
-              />
-              <span>Google Play</span>
-            </div>
-          </a>
-        </div>
+            <p>Conquer the Galaxy, One Battle at a Time!</p>
+          </div>
 
-        <div class="hero-description">
-          <h4>
-            "Prepare for an interstellar war like never before in Star Force!
-            Take command of a powerful starship fleet, engage in intense space
-            battles, and fight for supremacy across the cosmos. Customize your
-            fleet, upgrade weapons, and outmaneuver enemies in breathtaking
-            galactic warfare. Whether you’re a tactical mastermind or a fearless
-            space explorer, Star Force delivers high-octane action, strategic
-            depth, and stunning visuals that immerse you in the ultimate sci-fi
-            battle experience!"
-          </h4>
+          <div class="hero-btn">
+            <a
+              target="_blank"
+              href="https://play.google.com/store/apps/details?id=com.tbg.nova.gp&hl=ru&gl=us"
+            >
+              <div class="hero-btn-google-play">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAcCAYAAAB75n/uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAImSURBVHgBrZYxbNNAFIbfu5xDGygMCAQLJILC2qFBCFUipGFgLgiY2g4MbM3IAkGIoVMbJCYGwlC1DEiVWLpETiUQCFWiG2M9oKK2SKRtBDS+88M2DXKt2D6bfIv9zs//Z99JpwPYJz93a2h4/mYBegxenr+TlWjqBJB1B4AMRKx8uv3mFfQAHF4Y0+1rocuzRU6y/PHuogH/Ixh5tkS/T74IbgCqpch6nFTE0rsj0Ld5L7CBACckMv3S67FxSAAWn7bIuWkPvIOwP3GbE6zPP4GqZF+kPG0HBHEkqiLmH4haEy/O+lxM7+hC18aVBR3J4a9PAK0MhDHIt2Hm6IcsSaq169paNxELejm1dwYy6w8CJU7482PvYQBNt0aijujlL70vGykIk/jDvdiiCS7FmlnnM5GCbpKw8AMQTNmSR5ECr+QCM9XCPRIlgcO5722YfrsBR9oWxEFJcPXbEjz8XIZD6xbszg0C7aVACYRapMAJv/9lGjKi5dZyo19NgjCrjYoyUwn3EyFpCFPknHCnYHHD/RJrO+3WZG+EdlpBK4lr/TfA6PSxJOFeSWvhvGFvGVPpksxpRbHs7+FJw92vJqrsbLHq8ZLZDOrhycKpIaWYPN1YNaI6ebxwaqCFlRP6yjIowtXCqWkBVk7VV6oQEx4eTk0imP1piWqusdqEBODWaN45ExW6hCvPcxhcSHOSMU1H/HvwSjLPSmxezw/9KF45Cz3mD9LrLWecOqiBAAAAAElFTkSuQmCC"
+                  srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAcCAYAAAB75n/uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAImSURBVHgBrZYxbNNAFIbfu5xDGygMCAQLJILC2qFBCFUipGFgLgiY2g4MbM3IAkGIoVMbJCYGwlC1DEiVWLpETiUQCFWiG2M9oKK2SKRtBDS+88M2DXKt2D6bfIv9zs//Z99JpwPYJz93a2h4/mYBegxenr+TlWjqBJB1B4AMRKx8uv3mFfQAHF4Y0+1rocuzRU6y/PHuogH/Ixh5tkS/T74IbgCqpch6nFTE0rsj0Ld5L7CBACckMv3S67FxSAAWn7bIuWkPvIOwP3GbE6zPP4GqZF+kPG0HBHEkqiLmH4haEy/O+lxM7+hC18aVBR3J4a9PAK0MhDHIt2Hm6IcsSaq169paNxELejm1dwYy6w8CJU7482PvYQBNt0aijujlL70vGykIk/jDvdiiCS7FmlnnM5GCbpKw8AMQTNmSR5ECr+QCM9XCPRIlgcO5722YfrsBR9oWxEFJcPXbEjz8XIZD6xbszg0C7aVACYRapMAJv/9lGjKi5dZyo19NgjCrjYoyUwn3EyFpCFPknHCnYHHD/RJrO+3WZG+EdlpBK4lr/TfA6PSxJOFeSWvhvGFvGVPpksxpRbHs7+FJw92vJqrsbLHq8ZLZDOrhycKpIaWYPN1YNaI6ebxwaqCFlRP6yjIowtXCqWkBVk7VV6oQEx4eTk0imP1piWqusdqEBODWaN45ExW6hCvPcxhcSHOSMU1H/HvwSjLPSmxezw/9KF45Cz3mD9LrLWecOqiBAAAAAElFTkSuQmCC 1x, data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAA2CAYAAACBWxqaAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQwSURBVHgB1ZpLbBNHGMe/Wa9bIKWkKmmaUqlOpUgc0ypUHE2aSq16aKBUFac6h/ZsH3tpnEMFHIDkwJUkSDwFwgeOGJsDEo+ghBsSSLEQj4CQMHEID8/OMDPRWLax1/v4xjG/k3c9s/P/Zb4v8noN8IFDqg/i06PdyxusUcuCb+Qxd8jtzW+cfH4sU4QOpSIwdHpvEggfBw7dtQN4gXNrdm7fuTR0IEpg6NTetArvOpAXCCHpG3+en4UOguw4+8cgZ2zex5y8zZ2xa/syBegALM7ZuM85cUoiiztO75neeWo0BuuM1fVgIk7YJvALB5JwiJUbOrknCesIGf5/hTsf34fVr/YDt1YhCOvZH0pAvmDRZ/BSStjPIAQZ0R+pdvZHRUCCJCF3ZCbC2UQ7RKyag/JW6Hr0LxC6FcLQzv6o2QEN1k6oBQz3R0MBCaaEWshQWTUVkGBLqAWRRSzXN5F6ohrdHz+c+f0vQMB1BzQmdkItjtAflqdBBnZCInYjxjjM/Hz21+lXuQ0xCIAnATXQkMRmUobDn15L2A5dfJuN+hbxLKAGI0vI8Ee3XIUB+4U6JpwnIszJ0VzUc3/4ElATkCTqw2uERIw7fEbsxiK9HPmt1XV8C6hJISWaha9GiTCSaVVWgQTUxIASfZHVluGrkWUl+6OctY80EgksoCb7lPAbvgYOyUb9EUpAXcCjhA7fF/CeQ6L7o3zJnte7EVpAXaSFBEb4OgZFWV1QawMSzSQMhNcMir4YRxOQ1EsYDL8GhziqgERLbBNfFBgNvwa+gKR3mcKBi0+gt0TBNOgCPa+W4L/5FHz+5DksH9sOztONYAwOC6gCOnzP66W167+OQOnEgDEJQvgkmkB9eI0pCS7uJewRZxZFoFn4ymLYEqJ0nLKzS74MLdAqfGVNFAleFDdByehP9LuNv0BBngkl4DV8ZfkwEgQm7ZLT/9FIear6dGABv+E1ASTytEz7oz/SFNkN7z0pCiQQNLzGk4Soc5EuHh2hu3S5NMK3QNjwGi1Rvrul/p1KnUeH6ZVW1/ElgBVeIyVWzn1bdB52LagTBNKN6twNzwLY4avofnF8oGCX6Geizica1bkbngRipXtw8ObfBsLzPGEQ783O7fYbXGO3GiDDy7/8JroCePAiA5L+MjvnuVSa4SqAH140KIfJVUan+vMLKA/Pmwpghxffg2aoQ1N9+YUCINJQADe8rHOS7snNtfyXGIT3BPDCc1EiPPlF9pbRJ5c1Ajjh8evcjYoARnhTde6GEggf3mydu2HvfJov/nPnUHeQ8KJUxBMWljZd525Ezn9yd3uUvR30NWutzg+IOh/7Ojd/HdYRW3yYmAIGCc8zxCMhh9GJdta5G+oHT0vDQ0mLkCPuQ3Wd32x7nbtR+cnZ4+HvExZExgmBWPUAWeeUsNS27K0MdCDvAHrbo7CGeNbxAAAAAElFTkSuQmCC 2x"
+                  alt="Icon Google Play"
+                />
+                <span>Google Play</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="hero-description">
+            <h4>
+              "Prepare for an interstellar war like never before in Star Force!
+              Take command of a powerful starship fleet, engage in intense space
+              battles, and fight for supremacy across the cosmos. Customize your
+              fleet, upgrade weapons, and outmaneuver enemies in breathtaking
+              galactic warfare. Whether you’re a tactical mastermind or a
+              fearless space explorer, Star Force delivers high-octane action,
+              strategic depth, and stunning visuals that immerse you in the
+              ultimate sci-fi battle experience!"
+            </h4>
+          </div>
         </div>
       </div>
     </div>
