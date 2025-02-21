@@ -124,6 +124,8 @@
     transform: none;
     justify-content: flex-end;
     flex-grow: 1;
+    max-height: none;
+    overflow: visible;
   }
   .header-nav-list {
     display: flex;
