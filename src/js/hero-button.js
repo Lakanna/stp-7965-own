@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     heroBtn.addEventListener('mouseenter', () => {
       heroBtn.classList.add('hover');
     });
-
     heroBtn.addEventListener('mouseleave', () => {
       heroBtn.classList.remove('hover');
     });
