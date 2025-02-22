@@ -30,12 +30,17 @@
   text-shadow: 0px 0px 6px rgba(255, 255, 255, 100%);
   text-shadow: 0px 0px 3px rgba(255, 253, 245, 100%);
   text-shadow: 0px 0px 1px rgba(255, 246, 219, 100%);
+  text-shadow: 0px 0px 6px rgba(255, 254, 251, 0.8), 0px 0px 3px #fffdf5,
+    0px 0px 1px #fff6db;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #d4c492;
 }
 
 .go-home:hover img {
   filter: drop-shadow(
-    (0px 0px 6px rgba(255, 255, 255, 100%)),
-    (0px 0px 3px rgba(255, 253, 245, 100%))
+    0px 0px 6px rgba(255, 254, 251, 0.8),
+    0px 0px 3px #fffdf5,
+    0px 0px 1px #fff6db
   );
 }
 
