@@ -30,7 +30,6 @@ footer {
 }
 
 .footer-content nav ul li a {
-  color: #fff;
   text-align: center;
   font-family: Montserrat;
   font-size: 16px;
@@ -38,8 +37,22 @@ footer {
   line-height: 40px;
 }
 
-.footer-content nav ul li a:hover {
-  color: var(--decor-dackground, #a79561);
+.footer-content a:hover {
+  text-shadow: 0px 0px 6px rgba(255, 254, 251, 0.8), 0px 0px 3px #fffdf5,
+    0px 0px 1px #fff6db;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #d4c492;
+}
+
+.footer-content a:active {
+  color: #a79561;
+  text-shadow: none;
+}
+
+.footer-content a.active {
+  color: #a79561 !important;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #d4c492;
 }
 
 .footer-reserved h5 {

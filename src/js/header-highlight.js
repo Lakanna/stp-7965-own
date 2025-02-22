@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('section'); // Все секции
-  const navLinks = document.querySelectorAll('.header-nav-list a'); // Все ссылки в хедере
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.header-nav-list a');
+  const footerLinks = document.querySelectorAll('.footer-content a');
   const header = document.querySelector('.header');
-  let headerHeight = header.offsetHeight;
+  let headerHeight = header ? header.offsetHeight : 0;
 
   function getOffset() {
     return window.matchMedia('(max-width: 768px)').matches ? 70 : 130;
@@ -57,6 +58,25 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   window.addEventListener('resize', () => {
-    headerHeight = header.offsetHeight;
+    headerHeight = header ? header.offsetHeight : 0;
   });
+
+  function setFooterActive() {
+    const currentPath = window.location.pathname.replace(/\/$/, '');
+
+    footerLinks.forEach(link => {
+      const linkPath = new URL(
+        link.getAttribute('href'),
+        window.location.origin
+      ).pathname.replace(/\/$/, '');
+
+      if (currentPath === linkPath) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  setFooterActive();
 });
