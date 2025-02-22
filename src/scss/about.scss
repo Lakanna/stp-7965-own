@@ -68,6 +68,11 @@
 
 .about-img img {
   transform: translateZ(20px);
+  border-radius: 4px;
+  background: url(<path-to-image>) lightgray -0.059px -135.692px / 100.039% 200%
+    no-repeat;
+
+  box-shadow: 8px 8px 16px 4px #0d212b;
 }
 
 .about-img-mobile {
