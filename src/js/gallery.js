@@ -15,33 +15,33 @@ var ground = document.getElementById('ground');
 
 var additionalImages = [
   {
-    src: '/img/gallery/7.jpg',
-    srcset: '/img/gallery/7.jpg 1x, /img/gallery/7@2x.jpg 2x',
+    src: './img/gallery/7.jpg',
+    srcset: './img/gallery/7.jpg 1x, ./img/gallery/7@2x.jpg 2x',
     alt: 'Gallery Image 7',
   },
   {
-    src: '/img/gallery/8.jpg',
-    srcset: '/img/gallery/8.jpg 1x, /img/gallery/8@2x.jpg 2x',
+    src: './img/gallery/8.jpg',
+    srcset: './img/gallery/8.jpg 1x, ./img/gallery/8@2x.jpg 2x',
     alt: 'Gallery Image 8',
   },
   {
-    src: '/img/gallery/9.jpg',
-    srcset: '/img/gallery/9.jpg 1x, /img/gallery/9@2x.jpg 2x',
+    src: './img/gallery/9.jpg',
+    srcset: './img/gallery/9.jpg 1x, ./img/gallery/9@2x.jpg 2x',
     alt: 'Gallery Image 9',
   },
   {
-    src: '/img/gallery/10.jpg',
-    srcset: '/img/gallery/10.jpg 1x, /img/gallery/10@2x.jpg 2x',
+    src: './img/gallery/10.jpg',
+    srcset: './img/gallery/10.jpg 1x, ./img/gallery/10@2x.jpg 2x',
     alt: 'Gallery Image 10',
   },
   {
-    src: '/img/gallery/11.jpg',
-    srcset: '/img/gallery/11.jpg 1x, /img/gallery/11@2x.jpg 2x',
+    src: './img/gallery/11.jpg',
+    srcset: './img/gallery/11.jpg 1x, ./img/gallery/11@2x.jpg 2x',
     alt: 'Gallery Image 11',
   },
   {
-    src: '/img/gallery/12.jpg',
-    srcset: '/img/gallery/12.jpg 1x, /img/gallery/12@2x.jpg 2x',
+    src: './img/gallery/12.jpg',
+    srcset: './img/gallery/12.jpg 1x, ./img/gallery/12@2x.jpg 2x',
     alt: 'Gallery Image 12',
   },
 ];
