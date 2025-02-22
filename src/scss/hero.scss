@@ -24,7 +24,7 @@
 
 .hero-shadow {
   position: absolute;
-  bottom: -40px; /* Подвинь, если нужно */
+  bottom: -40px;
   left: 65%;
   transform: translateX(-50%);
   width: 100%;
@@ -72,6 +72,8 @@
   text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
+  position: relative;
+  z-index: 10;
 }
 
 .hero-btn a {
