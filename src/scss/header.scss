@@ -2,178 +2,134 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  max-width: 1200px;
-  width: 100%;
+  max-width: 320px;
+  height: 40px;
   margin: 0 auto;
+  padding: 10px 16px;
+  background: #0a1921;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: #0a1921;
 }
 
-.header-mobile {
-  width: 100%;
-  max-width: 375px;
-  margin: 0 auto;
-  padding: 10px 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #0a1921;
-  box-sizing: border-box;
-  overflow: visible;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-}
-
-.header-logo-mobile {
-  display: inline-block;
-  position: relative;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.header-logo-mobile img {
-  display: block;
+.header-logo img {
   width: 20px;
   height: 20px;
-  clip-path: inset(1px);
 }
 
-.header-logo-mobile::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #a79561;
-  border-radius: 4px;
-  z-index: 1;
-}
-
-.header-logo-mobile img {
-  z-index: 0;
+.header-logo-desktop {
+  display: none;
 }
 
 .menu-toggle {
-  background-color: transparent;
-  cursor: pointer;
+  background: none;
   border: none;
+  cursor: pointer;
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding: 0;
-
-  flex-shrink: 0;
 }
 
-.menu-toggle svg {
-  fill: #fff;
+.menu-toggle img {
   width: 20px;
   height: 20px;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.header-nav-mobile {
+.close-icon {
+  display: none;
+}
+
+.menu-toggle.active .menu-icon {
+  display: none;
+}
+
+.menu-toggle.active .close-icon {
+  display: block;
+}
+
+.header-nav {
   position: absolute;
-  top: 100%;
+  top: 40px;
   left: 0;
   width: 100%;
-  height: 100vh;
   background: rgba(10, 25, 33, 0.95);
-  z-index: 999; /* Чуть ниже основного хедера */
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
+  align-items: center;
+  padding: 0;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
 
-.header-nav-mobile.active {
-  transform: translateX(0);
-}
-
-.header-nav-list-mobile {
+.header-nav-list {
   list-style: none;
-  margin: 0;
-  padding: 20px 0 0;
-  flex-grow: 1;
-  display: flex;
   flex-direction: column;
   gap: 15px;
-}
-
-.header-nav-item-mobile {
+  padding: 0;
   margin: 0;
 }
-
-.header-nav-link-mobile {
+.header-nav-list a {
   color: #fff;
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
-.header-nav-link-mobile:hover {
+.header-nav-list a:hover {
+  text-shadow: 0px 0px 6px rgba(255, 254, 251, 0.8), 0px 0px 3px #fffdf5,
+    0px 0px 1px #fff6db;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #d4c492;
+}
+
+.header-nav-list a:active {
   color: #a79561;
 }
 
-.js-close-menu {
-  align-self: flex-end;
-  margin-bottom: 20px;
-}
-
 @media only screen and (min-width: 1200px) {
-  .header-mobile {
-    display: none !important;
+  .header {
+    max-width: 1200px;
+    height: 80px;
+    padding: 10px 36px;
   }
-}
 
-//------------Desktop Header----------------
-
-@media only screen and (max-width: 1199.98px) {
-  .header-desktop {
-    display: none !important;
+  .header-logo {
+    display: none;
   }
-}
 
-.header-desktop {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
-  padding: 10px 36px;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background: #0a1921;
-}
-.header-logo-desktop {
-  position: relative;
-  left: 0;
-  transform: none;
-}
-.header-nav {
-  display: flex;
-  justify-content: flex-end;
-  flex-grow: 1;
-}
-.header-nav-list {
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  .header-logo-desktop {
+    display: block;
+  }
+
+  .header-logo-desktop img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+  .header-nav {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    height: auto;
+    padding: 0;
+    transform: none;
+    justify-content: flex-end;
+    flex-grow: 1;
+    max-height: none;
+    overflow: visible;
+  }
+  .header-nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
 }

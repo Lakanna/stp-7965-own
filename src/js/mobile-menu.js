@@ -1,25 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const openMenuButton = document.querySelector('.js-open-menu');
-  const closeMenuButton = document.querySelector('.js-close-menu');
-  const navMobile = document.querySelector('.js-menu');
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.querySelector('.js-menu-toggle');
+  const menu = document.querySelector('.js-menu');
 
-  openMenuButton.addEventListener('click', () => {
-    navMobile.style.display = 'flex';
-    setTimeout(() => navMobile.classList.add('active'), 10);
-  });
+  menuToggle.addEventListener('click', function () {
+    const isOpen = menu.classList.contains('active');
 
-  closeMenuButton.addEventListener('click', () => {
-    navMobile.classList.remove('active');
-    setTimeout(() => (navMobile.style.display = 'none'), 300);
-  });
-
-  function checkScreenSize() {
-    if (window.innerWidth >= 1200) {
-      navMobile.classList.remove('active');
-      navMobile.style.display = 'none';
+    if (isOpen) {
+      menu.style.maxHeight = '0';
+      setTimeout(() => menu.classList.remove('active'), 300);
+    } else {
+      menu.classList.add('active');
+      menu.style.maxHeight = menu.scrollHeight + 'px';
     }
-  }
 
-  window.addEventListener('resize', checkScreenSize);
-  checkScreenSize(); // Вызываем при загрузке страницы
+    menuToggle.classList.toggle('active');
+  });
 });
