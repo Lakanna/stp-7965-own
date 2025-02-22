@@ -1,0 +1,56 @@
+.reviews-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include media(desktop) {
+    gap: 40px;
+  }
+}
+
+.review-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-block {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 480px;
+  padding: 24px;
+
+  background-image: url('../img/reviews/revtext.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  // background-position: center;
+}
+
+.review-text {
+  color: #0f3346;
+  width: 360px;
+  @include font(16, 22);
+
+  box-sizing: border-box;
+}
+
+.side-block {
+  position: relative;
+  max-width: 290px;
+  height: 207px;
+  background-image: url('../img/reviews/rev.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.side-text {
+  position: absolute;
+  left: 100%;
+  top: 94px;
+  transform: translateX(-159px);
+  text-align: center;
+  @include font(24, 28);
+  width: 150px;
+  box-sizing: border-box;
+}
