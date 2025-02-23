@@ -1,4 +1,4 @@
-<section class="gallery">
+<section id="gallery">
   <div class="container">
     <div class="section-title">
       <img
@@ -27,38 +27,79 @@
           <img
             src="/img/gallery/1.jpg"
             srcset="/img/gallery/1.jpg 1x, /img/gallery/1@2x.jpg 2x"
-            alt="image-1"
+            alt="Gallery Image 1"
           />
           <img
             src="/img/gallery/2.jpg"
             srcset="/img/gallery/2.jpg 1x, /img/gallery/2@2x.jpg 2x"
-            alt="image-2"
+            alt="Gallery Image 2"
           />
           <img
-            src="/img/gallery/3.jpg"
-            srcset="/img/gallery/3.jpg 1x, /img/gallery/3@2x.jpg 2x"
-            alt="image-3"
-          /><img
             src="/img/gallery/4.jpg"
             srcset="/img/gallery/4.jpg 1x, /img/gallery/4@2x.jpg 2x"
-            alt="image-4"
-          />
-          <img
-            src="/img/gallery/5.jpg"
-            srcset="/img/gallery/5.jpg 1x, /img/gallery/5@2x.jpg 2x"
-            alt="image-5"
+            alt="Gallery Image 4"
           /><img
             src="/img/gallery/6.jpg"
             srcset="/img/gallery/6.jpg 1x, /img/gallery/6@2x.jpg 2x"
-            alt="image-6"
+            alt="Gallery Image 6"
           />
+          <img
+            src="/img/gallery/9.jpg"
+            srcset="/img/gallery/9.jpg 1x, /img/gallery/9@2x.jpg 2x"
+            alt="Gallery Image 9"
+          /><img
+            src="/img/gallery/10.jpg"
+            srcset="/img/gallery/10.jpg 1x, /img/gallery/10@2x.jpg 2x"
+            alt="Gallery Image 10"
+          />
+          <div id="desktop-images"></div>
+          <!-- Only Dekstop version
+          <img
+            class="desktop-only"
+            src="/img/gallery/3.jpg"
+            srcset="/img/gallery/3.jpg 1x, /img/gallery/3@2x.jpg 2x"
+            alt="Gallery Image 3"
+          />
+          <img
+            class="desktop-only"
+            src="/img/gallery/5.jpg"
+            srcset="/img/gallery/5.jpg 1x, /img/gallery/5@2x.jpg 2x"
+            alt="Gallery Image 5"
+          />
+          <img
+            class="desktop-only"
+            src="/img/gallery/7.jpg"
+            srcset="/img/gallery/7.jpg 1x, /img/gallery/7@2x.jpg 2x"
+            alt="Gallery Image 7"
+          />
+          <img
+            class="desktop-only"
+            src="/img/gallery/8.jpg"
+            srcset="/img/gallery/8.jpg 1x, /img/gallery/8@2x.jpg 2x"
+            alt="Gallery Image 8"
+          />
+          <img
+            class="desktop-only"
+            src="/img/gallery/11.jpg"
+            srcset="/img/gallery/11.jpg 1x, /img/gallery/11@2x.jpg 2x"
+            alt="Gallery Image 11"
+          />
+          <img
+            class="desktop-only"
+            src="/img/gallery/12.jpg"
+            srcset="/img/gallery/12.jpg 1x, /img/gallery/12@2x.jpg 2x"
+            alt="Gallery Image 12"
+          /> -->
         </div>
         <div id="ground"></div>
       </div>
     </div>
     <div id="lightbox" class="lightbox">
-      <span class="close">&times;</span>
-      <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+      <div class="lightbox-content">
+        <img id="lightbox-img" class="lightbox-img" src="" alt="" />
+        <button class="close">✕</button>
+        <!-- Переместили кнопку вниз -->
+      </div>
     </div>
   </div>
 </section>

@@ -89,6 +89,13 @@
 
 .header-nav-list a:active {
   color: #a79561;
+  text-shadow: none;
+}
+
+.header-nav-list a.active {
+  color: #a79561;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #d4c492;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -132,4 +139,8 @@
     flex-direction: row;
     gap: 20px;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
