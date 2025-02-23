@@ -10,6 +10,10 @@
   }
 }
 
+.reviews-box img {
+  z-index: 10;
+}
+
 .review-img-desctop:nth-child(odd) {
   align-self: flex-start;
 }
@@ -76,4 +80,28 @@
   @include font(24, 28);
   width: 150px;
   box-sizing: border-box;
+}
+
+.decor-down {
+  display: none;
+
+  @include media(desktop) {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-124px);
+    height: 2193px;
+  }
+}
+
+.decor-down-mobile {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60px);
+  height: 1850px;
+  z-index: 0;
+
+  @include media(desktop) {
+    display: none;
+  }
 }
