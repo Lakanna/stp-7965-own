@@ -17,6 +17,15 @@ gallery-3d {
   transform-style: preserve-3d;
 }
 
+#desktop-images img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  transform-style: preserve-3d;
+}
+
 #drag-container,
 #spin-container {
   position: relative;
@@ -140,6 +149,7 @@ gallery-3d {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -147,21 +157,37 @@ gallery-3d {
 }
 
 .lightbox.show {
-  display: flex; /* Показываем, когда добавляется класс .show */
+  display: flex;
   opacity: 1;
+}
+
+.lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background: rgba(55, 84, 99, 0.5);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .lightbox-img {
   max-width: 90%;
-  max-height: 90%;
+  max-height: 80vh;
   border-radius: 10px;
 }
 
 .close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 40px;
-  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  background: #111a1f;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  color: white;
+  transition: background 0.3s;
+}
+
+.close:hover {
+  background: #0f3346;
 }
