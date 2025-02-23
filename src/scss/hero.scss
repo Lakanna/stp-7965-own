@@ -6,36 +6,28 @@
   width: 289px;
   height: 204px;
   flex-shrink: 0;
+  position: relative;
+}
+
+.hero-image-shadow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-bottom: 42px;
 }
 
 .shadow-line {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.shadow-1 {
-  width: 90px;
-  height: 16px;
-  flex-shrink: 0;
-  margin-left: 54px;
-}
-
-.shadow-2 {
-  width: 90px;
-  height: 13px;
-  flex-shrink: 0;
-  margin-left: 108px;
-}
-
-.shadow-3 {
-  width: 90px;
-  height: 11px;
-  flex-shrink: 0;
+  width: 100%;
 }
 
 .hero-shadow {
-  margin-bottom: 16px;
+  position: absolute;
+  bottom: -40px;
+  left: 65%;
+  transform: translateX(-50%);
+  width: 100%;
 }
 
 .hero-title {
@@ -78,8 +70,10 @@
   border: 2px solid #a79561;
   background: #fff;
   text-decoration: none;
-  transition: all 0.3s ease; /* Плавность */
-  cursor: pointer; /* Убедимся, что курсор меняется */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
 }
 
 .hero-btn a {
@@ -110,7 +104,6 @@
   white-space: nowrap;
 }
 
-/* ✅ Гарантируем, что hover работает */
 .hero-btn:hover {
   box-shadow: 0px 0px 8px 0px rgba(255, 254, 251, 0.8), 0px 0px 6px 0px #fffdf5,
     0px 0px 2px 0px #fff6db;
@@ -141,7 +134,10 @@
   display: none;
 }
 
-/* === Десктопная версия === */
+.shadow-line-desk {
+  display: none;
+}
+
 @media (min-width: 1200px) {
   .hero-image {
     display: none;
@@ -149,6 +145,15 @@
 
   .hero-shadow {
     display: none;
+  }
+
+  .shadow-line-desk {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 83%;
+    z-index: 1;
   }
 
   .hero {
@@ -180,6 +185,7 @@
     position: relative;
     width: 456px;
     height: 595px;
+    z-index: 2;
   }
 
   .hero-image-desktop-img {
