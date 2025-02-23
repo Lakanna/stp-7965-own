@@ -170,7 +170,7 @@
   }
 
   .menu-toggle {
-    display: none;
+    display: none !important;
   }
   .header-nav {
     position: static;
@@ -189,6 +189,11 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
+  }
+  .header-nav-list li {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 

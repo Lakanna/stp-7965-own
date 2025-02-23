@@ -8,18 +8,21 @@ document.addEventListener('DOMContentLoaded', function () {
   document.body.appendChild(overlay);
 
   function toggleMenu() {
-    menu.classList.toggle('active');
-    menuToggle.classList.toggle('active'); // Переключаем состояние кнопки
-    overlay.classList.toggle('active');
+    if (window.innerWidth < 1200) {
+      menu.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+      overlay.classList.toggle('active');
+    }
   }
 
-  menuToggle.addEventListener('click', toggleMenu);
+  menuToggle?.addEventListener('click', toggleMenu);
   overlay.addEventListener('click', toggleMenu);
 
-  // Закрытие меню при клике на любую ссылку
   menuLinks.forEach(link => {
     link.addEventListener('click', function () {
-      setTimeout(toggleMenu, 300);
+      if (window.innerWidth < 1200) {
+        setTimeout(toggleMenu, 300);
+      }
     });
   });
 });
