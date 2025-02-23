@@ -2,12 +2,35 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-bottom: 60px;
 
   @include media(desktop) {
     gap: 40px;
+    margin-bottom: 126px;
   }
 }
 
+.review-img-desctop:nth-child(odd) {
+  align-self: flex-start;
+}
+
+.review-img-desctop:nth-child(even) {
+  align-self: flex-end;
+}
+
+.review-img-desctop {
+  display: none;
+
+  @include media(desktop) {
+    display: block;
+  }
+}
+
+.review-img-mob {
+  @include media(desktop) {
+    display: none;
+  }
+}
 .review-wrapper {
   position: relative;
   display: flex;
