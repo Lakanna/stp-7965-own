@@ -61,13 +61,11 @@ function addDesktopImages() {
     let addedImages = document.querySelectorAll('.desktop-only');
     addedImages.forEach(img => img.remove());
     desktopImagesAdded = false; // Теперь при возвращении на десктоп заново добавятся
-    console.log('Удалены изображения для мобильной версии');
     return;
   }
 
   // Если изображения уже добавлены – ничего не делаем
   if (desktopImagesAdded) {
-    console.log('Изображения уже добавлены – пропускаем добавление');
     return;
   }
   let images = [
@@ -241,9 +239,10 @@ function init(delayTime) {
 // Функция применения трансформации
 function applyTranform(obj) {
   let maxTilt = 85;
+  let minTilt = 0;
 
   if (tY > maxTilt) tY = maxTilt;
-  if (tY < -maxTilt) tY = -maxTilt;
+  if (tY < minTilt) tY = minTilt;
   obj.style.transform = `rotateX(${-tY}deg) rotateY(${tX}deg)`;
 }
 
@@ -268,15 +267,6 @@ if (autoRotate) {
   ospin.style.animation = `${animationName} ${Math.abs(
     rotateSpeed
   )}s infinite linear`;
-}
-
-// Фоновая музыка
-if (bgMusicURL) {
-  document.getElementById('music-container').innerHTML += `
-  <audio src="${bgMusicURL}" ${bgMusicControls ? 'controls' : ''} autoplay loop>
-    <p>Your browser does not support the audio element.</p>
-  </audio>
-  `;
 }
 
 // Управление мышью

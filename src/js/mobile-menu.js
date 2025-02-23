@@ -1,18 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.querySelector('.js-menu-toggle');
   const menu = document.querySelector('.js-menu');
+  const overlay = document.createElement('div');
+  const menuLinks = document.querySelectorAll('.header-nav-list a');
 
-  menuToggle.addEventListener('click', function () {
-    const isOpen = menu.classList.contains('active');
+  overlay.classList.add('overlay');
+  document.body.appendChild(overlay);
 
-    if (isOpen) {
-      menu.style.maxHeight = '0';
-      setTimeout(() => menu.classList.remove('active'), 300);
-    } else {
-      menu.classList.add('active');
-      menu.style.maxHeight = menu.scrollHeight + 'px';
+  function toggleMenu() {
+    if (window.innerWidth < 1200) {
+      menu.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+      overlay.classList.toggle('active');
     }
+  }
 
-    menuToggle.classList.toggle('active');
+  menuToggle?.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', toggleMenu);
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      if (window.innerWidth < 1200) {
+        setTimeout(toggleMenu, 300);
+      }
+    });
   });
 });
