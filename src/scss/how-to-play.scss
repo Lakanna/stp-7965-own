@@ -1,0 +1,224 @@
+.how-to-play {
+  margin-bottom: 60px;
+  @include media(desktop) {
+    margin-bottom: 126px;
+  }
+}
+.section-title {
+  margin-bottom: 30px;
+  @include media(desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.how-title {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  @include media(desktop) {
+    gap: 40px;
+  }
+}
+
+.how-title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  @include media(desktop) {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+.how-title-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.how-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 54px;
+  flex-shrink: 0;
+  background-image: url('/img/how-to-play/union.png'); /* Картинка круга */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include media(desktop) {
+    background-image: url('/img/how-to-play/union-desk.png');
+    width: 88.5px;
+    height: 75px;
+  }
+}
+
+@include media(desktop) {
+  .how-title-group:nth-child(2) .how-circle {
+    margin-left: 58px;
+  }
+
+  .how-title-group:nth-child(3) .how-circle {
+    margin-left: 116px;
+  }
+
+  .how-title-group:nth-child(4) .how-circle {
+    margin-left: 174px;
+  }
+
+  .how-title-group:nth-child(5) .how-circle {
+    margin-left: 232px;
+  }
+
+  .how-title-group:nth-child(6) .how-circle {
+    margin-left: 290px;
+  }
+}
+
+.how-number {
+  color: #fff;
+  font-family: Montserrat;
+  font-weight: 400;
+  @include font(24, 24);
+  @include media(desktop) {
+    @include font(36, 24);
+  }
+}
+
+.how-name {
+  color: #fff;
+  font-family: Montserrat;
+  font-weight: 400;
+  @include font(20, 24);
+  @include media(desktop) {
+    @include font(32, 30);
+    white-space: nowrap;
+    &::after {
+      content: ' -';
+    }
+  }
+}
+
+.how-desc {
+  color: #fff;
+  font-family: Montserrat;
+  font-weight: 300;
+  position: relative;
+  padding-left: 42px;
+  @include font(16, 20);
+  @include media(desktop) {
+    padding-left: 0;
+    @include font(20, 30);
+    max-width: 502px;
+  }
+}
+
+@include media(desktop) {
+  .how-title-group:nth-child(2) .how-desc {
+    max-width: 408px;
+  }
+
+  .how-title-group:nth-child(3) .how-desc {
+    max-width: 471px;
+  }
+
+  .how-title-group:nth-child(4) .how-desc {
+    max-width: 415px;
+  }
+
+  .how-title-group:nth-child(5) .how-desc {
+    max-width: 471px;
+  }
+
+  .how-title-group:nth-child(6) .how-desc {
+    max-width: 340px;
+  }
+}
+
+.how-desc::before {
+  content: '';
+  position: absolute;
+  left: -17px;
+  top: 85%;
+  width: 48px;
+  height: 148px;
+  flex-shrink: 0;
+  background-image: url('/img/how-to-play/line.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+/* Специальная линия для 3-го блока */
+.how-title-group:nth-child(3) .how-desc::before {
+  background-image: url('/img/how-to-play/line-3.png');
+  top: 35%;
+  width: 48px;
+  height: 100px;
+}
+
+@include media(desktop) {
+  .how-title-group:nth-child(n + 2) .how-circle::before {
+    content: '';
+    position: absolute;
+    width: 85px; /* Ширина линии */
+    height: 130px; /* Высота линии */
+    background-image: url('/img/how-to-play/line-desk.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  /* Смещение линий вниз для шахматного порядка */
+  .how-title-group:nth-child(2) .how-circle::before {
+    top: -68px;
+    left: -27px;
+  }
+
+  .how-title-group:nth-child(3) .how-circle::before {
+    top: -68px;
+    left: 31px;
+  }
+
+  .how-title-group:nth-child(4) .how-circle::before {
+    top: -68px;
+    left: 89px;
+  }
+
+  .how-title-group:nth-child(5) .how-circle::before {
+    top: -68px;
+    left: 147px;
+  }
+
+  .how-title-group:nth-child(6) .how-circle::before {
+    top: -68px;
+    left: 205px;
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .how-title-group:nth-child(3) .how-desc::before {
+    background-image: url('/img/how-to-play/line-3@2x.png');
+  }
+
+  .how-title-group .how-circle::before {
+    background-image: url('/img/how-to-play/line-desk@2x.png') !important;
+  }
+
+  .how-desc::before {
+    background-image: url('/img/how-to-play/line@2x.png');
+  }
+
+  .how-circle {
+    background-image: url('/img/how-to-play/union@2x.png');
+    @include media(desktop) {
+      background-image: url('/img/how-to-play/union-desk@2x.png');
+    }
+  }
+}
