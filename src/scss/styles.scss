@@ -30,12 +30,18 @@
 }
 
 .background {
+  width: 320px;
+  margin: 0 auto;
   background-image: linear-gradient(
     90deg,
     #111a1f 0.48%,
     #375463 48.33%,
     #111a1f 96.17%
   );
+
+  @include media(desktop) {
+    width: 1200px;
+  }
 }
 
 .container {
