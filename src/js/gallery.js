@@ -1,6 +1,6 @@
 var radius = window.innerWidth >= 1200 ? 470 : 140; // Радиус зависит от экрана
 var autoRotate = true; // Автовращение
-var rotateSpeed = -40; // Время одного оборота (чем меньше, тем быстрее)
+var rotateSpeed = window.innerWidth >= 1200 ? -40 : -30; // Время одного оборота (чем меньше, тем быстрее)
 var imgWidth = window.innerWidth >= 1200 ? 234 : 120;
 var imgHeight = window.innerWidth >= 1200 ? 450.6 : 170;
 
@@ -66,7 +66,8 @@ function init(delayTime) {
 // Функция применения трансформации (Ограничение угла наклона)
 function applyTranform(obj) {
   let maxTilt = 85; // Максимальный наклон сверху (85°)
-  let minTilt = 0; // Минимальный наклон (0° - нельзя смотреть под карусель)
+  let isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  let minTilt = isMobile ? 20 : 15; // Минимальный наклон (0° - нельзя смотреть под карусель)
 
   if (tY > maxTilt) tY = maxTilt;
   if (tY < minTilt) tY = minTilt;
@@ -87,7 +88,7 @@ var sX,
   desX = 0,
   desY = 0,
   tX = 0,
-  tY = 10;
+  tY = 15;
 
 // Автоматическое вращение
 if (autoRotate) {
@@ -134,14 +135,6 @@ document.onpointerdown = function (e) {
   };
 
   return false;
-};
-
-// Управление колёсиком мыши (изменение радиуса)
-document.onmousewheel = function (e) {
-  e = e || window.event;
-  var d = e.wheelDelta / 20 || -e.detail;
-  radius += d;
-  updateGallery();
 };
 
 // Функция для открытия изображений в полноэкранном режиме (lightbox)
