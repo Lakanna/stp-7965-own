@@ -172,9 +172,14 @@ gallery-3d {
 }
 
 .lightbox-img {
-  max-width: 100%;
-  max-height: 80vh;
+  width: 100%;
+  max-width: 290px;
+  height: auto;
   border-radius: 4px;
+  @include media(desktop) {
+    width: 100%;
+    max-width: 1100px;
+  }
 }
 
 .close {
