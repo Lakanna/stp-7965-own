@@ -186,7 +186,7 @@
   }
 
   .menu-toggle {
-    display: none !important;
+    display: none;
   }
   .header-nav {
     position: static;
@@ -200,6 +200,9 @@
     flex-grow: 1;
     max-height: none;
     overflow: visible;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
   }
   .header-nav-list {
     display: flex;
