@@ -36,6 +36,12 @@
   transition: opacity 0.5s ease-in-out;
 }
 
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  touch-action: none;
+}
+
 .overlay {
   position: fixed;
   top: 0;
