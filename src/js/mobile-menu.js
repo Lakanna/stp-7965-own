@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const menu = document.querySelector('.js-menu');
   const overlay = document.createElement('div');
   const menuLinks = document.querySelectorAll('.header-nav-list a');
+  const body = document.body;
 
   overlay.classList.add('overlay');
   document.body.appendChild(overlay);
@@ -12,6 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
       menu.classList.toggle('active');
       menuToggle.classList.toggle('active');
       overlay.classList.toggle('active');
+
+      if (menu.classList.contains('active')) {
+        body.classList.add('no-scroll');
+      } else {
+        body.classList.remove('no-scroll');
+      }
     }
   }
 
