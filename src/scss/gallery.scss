@@ -141,7 +141,7 @@ gallery-3d {
 }
 
 .lightbox {
-  display: none; /* Скрыто по умолчанию */
+  visibility: hidden;
   position: fixed;
   z-index: 1001;
   left: 0;
@@ -157,7 +157,7 @@ gallery-3d {
 }
 
 .lightbox.show {
-  display: flex;
+  visibility: visible;
   opacity: 1;
 }
 
