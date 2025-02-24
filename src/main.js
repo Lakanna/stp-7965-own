@@ -8,5 +8,6 @@ import './js/header-highlight';
 
 import './js/gallery';
 
-import './js/cookie-popup.js';
+import './js/back-to-home.js';
 
+import './js/cookie-popup.js';

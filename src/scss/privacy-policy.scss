@@ -14,14 +14,17 @@
 }
 
 .go-home {
-  margin-bottom: 40px;
   display: flex;
   align-items: center;
   gap: 6px;
+  position: fixed;
+  background-color: inherit;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
 
-  @include media(desktop) {
-    margin-bottom: 60px;
-  }
+.go-home.scrolled {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
 }
 
 .go-home:hover a,
@@ -45,9 +48,11 @@
 }
 
 .title {
+  margin-top: 60px;
   margin-bottom: 20px;
 
   @include media(desktop) {
+    margin-top: 80px;
     margin-bottom: 40px;
   }
 }
