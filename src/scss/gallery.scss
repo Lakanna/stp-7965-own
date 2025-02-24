@@ -196,3 +196,14 @@ gallery-3d {
 .close:hover {
   background: #0f3346;
 }
+/* По умолчанию скрываем доп. изображения */
+.desktop-only {
+  display: none;
+}
+
+/* Показываем только на десктопе (1200px и выше) */
+@media (min-width: 1200px) {
+  .desktop-only {
+    display: block;
+  }
+}
