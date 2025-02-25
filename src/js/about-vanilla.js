@@ -9,12 +9,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let initialRotateX = 5;
   let initialRotateY = -35;
-  const screenWidth = window.innerWidth;
-  const isMobile = screenWidth < 1200;
 
-  tiltElement.style.transform = `rotateX(${initialRotateX}deg) rotateY(${initialRotateY}deg) scale(1)`;
+  // Определяем, поддерживает ли устройство наведение курсором
+  const supportsHover = window.matchMedia('(hover: hover)').matches;
 
-  if (isMobile) {
+  if (supportsHover) {
+    // Логика для устройств с поддержкой hover (десктоп)
+    tiltElement.style.transform = `rotateX(${initialRotateX}deg) rotateY(${initialRotateY}deg) scale(1)`;
+
+    if (tiltElement.vanillaTilt) {
+      tiltElement.vanillaTilt.destroy();
+    }
+
+    VanillaTilt.init(tiltElement, {
+      max: 25,
+      speed: 400,
+      perspective: 1000,
+      gyroscope: false,
+      mobile: false,
+      reset: true,
+    });
+
+    setTimeout(() => {
+      tiltElement.style.transition = 'transform 0.3s ease-out';
+      tiltElement.style.transform = `rotateX(${initialRotateX}deg) rotateY(${initialRotateY}deg) scale(1)`;
+    }, 100);
+
+    tiltElement.addEventListener('mouseleave', function () {
+      setTimeout(() => {
+        if (tiltElement.vanillaTilt) {
+          tiltElement.style.transition = 'transform 0.3s ease-out';
+          tiltElement.style.transform = `rotateX(${initialRotateX}deg) rotateY(${initialRotateY}deg) scale(1)`;
+        }
+      }, 50);
+    });
+  } else {
+    // Логика для устройств без поддержки hover (мобильные)
+    tiltElement.style.transform = `rotateX(${initialRotateX}deg) rotateY(${initialRotateY}deg) scale(1)`;
+
     let lastX = null,
       lastY = null,
       currentTiltX = initialRotateX,
@@ -58,32 +90,10 @@ document.addEventListener('DOMContentLoaded', function () {
         tiltElement.style.transform = `rotateX(${initialRotateX}deg) rotateY(${initialRotateY}deg) scale(1)`;
       }, 50);
     });
-  } else {
-    if (tiltElement.vanillaTilt) {
-      tiltElement.vanillaTilt.destroy();
-    }
-
-    VanillaTilt.init(tiltElement, {
-      max: 25,
-      speed: 400,
-      perspective: 1000,
-      gyroscope: false,
-      mobile: false,
-      reset: true,
-    });
-
-    setTimeout(() => {
-      tiltElement.style.transition = 'transform 0.3s ease-out';
-      tiltElement.style.transform = `rotateX(${initialRotateX}deg) rotateY(${initialRotateY}deg) scale(1)`;
-    }, 100);
 
     tiltElement.addEventListener('mouseleave', function () {
-      setTimeout(() => {
-        if (tiltElement.vanillaTilt) {
-          tiltElement.style.transition = 'transform 0.3s ease-out';
-          tiltElement.style.transform = `rotateX(${initialRotateX}deg) rotateY(${initialRotateY}deg) scale(1)`;
-        }
-      }, 50);
+      tiltElement.style.transition = 'transform 0.6s ease-out';
+      tiltElement.style.transform = `rotateX(${initialRotateX}deg) rotateY(${initialRotateY}deg) scale(1)`;
     });
   }
 });
