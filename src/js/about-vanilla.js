@@ -51,44 +51,56 @@ document.addEventListener('DOMContentLoaded', function () {
       currentTiltX = initialRotateX,
       currentTiltY = initialRotateY;
 
-    tiltElement.addEventListener('touchstart', function (event) {
-      const touch = event.touches[0];
-      lastX = touch.clientX;
-      lastY = touch.clientY;
-    });
+    tiltElement.addEventListener(
+      'touchstart',
+      function (event) {
+        const touch = event.touches[0];
+        lastX = touch.clientX;
+        lastY = touch.clientY;
+      },
+      { passive: false }
+    );
 
-    tiltElement.addEventListener('touchmove', function (event) {
-      event.preventDefault();
+    tiltElement.addEventListener(
+      'touchmove',
+      function (event) {
+        event.preventDefault();
 
-      const touch = event.touches[0];
-      const deltaX = touch.clientX - lastX;
-      const deltaY = touch.clientY - lastY;
+        const touch = event.touches[0];
+        const deltaX = touch.clientX - lastX;
+        const deltaY = touch.clientY - lastY;
 
-      lastX = touch.clientX;
-      lastY = touch.clientY;
+        lastX = touch.clientX;
+        lastY = touch.clientY;
 
-      const maxTilt = 25;
-      const minTilt = -20;
+        const maxTilt = 25;
+        const minTilt = -20;
 
-      currentTiltX = Math.max(
-        minTilt,
-        Math.min(maxTilt, currentTiltX - deltaY * 0.3)
-      );
-      currentTiltY = Math.max(
-        minTilt,
-        Math.min(maxTilt, currentTiltY + deltaX * 0.3)
-      );
+        currentTiltX = Math.max(
+          minTilt,
+          Math.min(maxTilt, currentTiltX - deltaY * 0.3)
+        );
+        currentTiltY = Math.max(
+          minTilt,
+          Math.min(maxTilt, currentTiltY + deltaX * 0.3)
+        );
 
-      tiltElement.style.transition = 'transform 0.05s ease-out';
-      tiltElement.style.transform = `rotateX(${currentTiltX}deg) rotateY(${currentTiltY}deg) scale(1)`;
-    });
+        tiltElement.style.transition = 'transform 0.05s ease-out';
+        tiltElement.style.transform = `rotateX(${currentTiltX}deg) rotateY(${currentTiltY}deg) scale(1)`;
+      },
+      { passive: false }
+    );
 
-    tiltElement.addEventListener('touchend', function () {
-      setTimeout(() => {
-        tiltElement.style.transition = 'transform 0.6s ease-out';
-        tiltElement.style.transform = `rotateX(${initialRotateX}deg) rotateY(${initialRotateY}deg) scale(1)`;
-      }, 50);
-    });
+    tiltElement.addEventListener(
+      'touchend',
+      function () {
+        setTimeout(() => {
+          tiltElement.style.transition = 'transform 0.6s ease-out';
+          tiltElement.style.transform = `rotateX(${initialRotateX}deg) rotateY(${initialRotateY}deg) scale(1)`;
+        }, 50);
+      },
+      { passive: false }
+    );
 
     tiltElement.addEventListener('mouseleave', function () {
       tiltElement.style.transition = 'transform 0.6s ease-out';
