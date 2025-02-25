@@ -57,12 +57,19 @@
 }
 
 .about-img {
-  padding: 50px 60px;
-  transform-style: preserve-3d;
-  transition: transform 0.3s ease-out;
-  will-change: transform;
-
+  padding: 50px 44px;
   perspective: 1200px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .about-img {
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform 0.3s ease-out;
+  }
+}
+.rellax {
+  transform: translate3d(0px, 0px, 0px);
 }
 
 .about-img img {
@@ -75,8 +82,10 @@
 }
 
 .about-img-mobile {
-  height: 200px;
-  width: 200px;
+  height: 200px !important;
+  width: 200px !important;
+  max-width: 200px !important;
+  flex-shrink: 0;
 }
 
 .about-description {
