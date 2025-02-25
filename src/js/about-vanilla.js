@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', function () {
   let initialRotateX = 5;
   let initialRotateY = -35;
 
-  // Определяем, поддерживает ли устройство наведение курсором
   const supportsHover = window.matchMedia('(hover: hover)').matches;
 
-  if (supportsHover) {
-    // Логика для устройств с поддержкой hover (десктоп)
+  const isMobileWidth = window.innerWidth < 1200;
+
+  if (supportsHover && !isMobileWidth) {
     tiltElement.style.transform = `rotateX(${initialRotateX}deg) rotateY(${initialRotateY}deg) scale(1)`;
 
     if (tiltElement.vanillaTilt) {
@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 50);
     });
   } else {
-    // Логика для устройств без поддержки hover (мобильные)
     tiltElement.style.transform = `rotateX(${initialRotateX}deg) rotateY(${initialRotateY}deg) scale(1)`;
 
     let lastX = null,
